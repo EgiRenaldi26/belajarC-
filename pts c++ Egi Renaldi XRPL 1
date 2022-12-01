@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int bayar,akhir,diskon,uang;
+    cout<<"Nama:Egi Renaldi"<<endl<<"Kelas:X RPL 1"<<endl;
+    cout<<"--------------------------"<<endl;
+    cout<<"Total pembayaran : ";
+    cin>>bayar;
+    if (bayar>5000000){
+        diskon=bayar*0.79;
+        akhir=bayar-diskon;
+        cout<<endl<<"selamat anda mendapatkan diskon 70%"<<endl;
+    } else if ((bayar<=2000000) && (bayar>=5000000)){
+        diskon=bayar*0.5;
+        akhir=bayar-diskon;
+        cout<<endl<<"selamat anda mendapatkan diskon 50%"<<endl;
+    } else if ((bayar<=1000000) && (bayar>=2000000)){
+        diskon=bayar*0.1;
+        akhir=bayar-diskon;
+        cout<<endl<<"selamat anda mendapatkan diskon 10%"<<endl;
+    }else {
+        akhir=bayar;
+    }
+    cout<<endl<<"jadi total pembayarannya = "<<akhir<<endl;;
+    cout<<"Masukkan jumlah uang : ";
+    cin>>uang;
+    cout<<"-------------------------"<<endl;
+    int kembalian= uang-akhir;
+    cout<<"Kembalian anda : "<<kembalian;
+    return 0;
+}
